@@ -1,0 +1,33 @@
+public class Main {
+    public static void main(String[] args) {
+        Circle circle_1 = new Circle();
+        circle_1.squareCircle();
+        circle_1.radiusCircle();
+        Circle circle_2 = new Circle(10, 5);
+        circle_2.squareCircle();
+        circle_2.radiusCircle();
+    }
+}
+public class Circle {
+    float radius;
+    float diameter;
+
+    public  Circle(){
+        this.radius = 4f;
+        this.diameter = 10f;
+    }
+    public  Circle (float radius,float diameter){
+        this.radius = radius;
+        this.diameter = diameter;
+    }
+
+    public void squareCircle(){
+        float square = (float) (Math.PI * (Math.pow(diameter,2)/4));
+        System.out.println("Площа кола =" + " " + square);
+    }
+    public void radiusCircle(){
+        float сircuit = (float) (2* Math.PI) * radius;
+        System.out.println("Довжина кола =" + " " + сircuit);
+    }
+}
+
