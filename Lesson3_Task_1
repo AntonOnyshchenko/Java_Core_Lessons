@@ -1,0 +1,29 @@
+public class Main {
+    public static void main(String[] args) {
+        Rectangle rect1= new Rectangle();
+        System.out.println("Площа прямокутника =" + " "+ rect1.square());
+        System.out.println("Периметр  прямокутника =" + " "+  rect1.perimeter());
+        Rectangle rect2= new Rectangle(1,5);
+        System.out.println("Площа прямокутника =" +" "+rect2.square());
+        System.out.println("Периметр  прямокутника =" +" "+ rect2.perimeter());
+    }
+}
+public class Rectangle {
+    int length;
+    int width;
+
+    public  Rectangle(){
+        this.length = 11;
+        this.width = 10;
+    }
+    public  Rectangle(int length,int width){
+        this.length = length;
+        this.width = width;
+    }
+    public int square(){
+        return  this.length * this.width;
+    }
+    public int perimeter(){
+        return  (this.length + this.width) *2;
+    }
+}
