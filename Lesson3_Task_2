@@ -8,6 +8,7 @@ public class Main {
         circle_2.radiusCircle();
     }
 }
+import java.util.*;
 public class Circle {
     float radius;
     float diameter;
@@ -22,11 +23,11 @@ public class Circle {
     }
 
     public void squareCircle(){
-        float square = (float) (Math.PI * (Math.pow(diameter,2)/4));
+        float square = (float) (Math.PI * (Math.pow(this.diameter,2)/4));
         System.out.println("Площа кола =" + " " + square);
     }
     public void radiusCircle(){
-        float сircuit = (float) (2* Math.PI) * radius;
+        float сircuit = (float) (2* Math.PI) * this.radius;
         System.out.println("Довжина кола =" + " " + сircuit);
     }
 }
