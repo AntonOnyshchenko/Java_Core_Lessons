@@ -1,0 +1,59 @@
+public class Main {
+    public static void main(String[] args) {
+        Robot robot = new Robot();
+        robot.work();
+        CoffeeRobot coffeeRobot = new CoffeeRobot();
+        coffeeRobot.work();
+        RobotDancer dancerRobot = new RobotDancer();
+        dancerRobot.work();
+        RobotCoocker coockerRobot = new RobotCoocker();
+        coockerRobot.work();
+        Robot [] robotsArrays = {robot,coffeeRobot,dancerRobot,coockerRobot};
+        for(int i = 0; i < robotsArrays.length;i++){
+            robotsArrays[i].work();
+        }
+    }
+}
+public class Robot {
+    public String robotName;
+    public String whatICanDo;
+    public  Robot(){
+        this.robotName = "Robot";
+        this.whatICanDo = "work";
+    }
+    public Robot(String robotName, String whatICanDo){
+        this.robotName = robotName;
+        this.whatICanDo = whatICanDo;
+    }
+    public void work (){
+        System.out.println("I am" + " "+this.robotName+ " "+ "I can do"+ " "+ this.whatICanDo);
+
+    }
+}
+public class CoffeeRobot extends Robot {
+    public  CoffeeRobot(){
+        this.robotName = "CoffeeRobot";
+        this.whatICanDo = "coffee";
+    }
+    public CoffeeRobot(String robotName, String whatICanDo) {
+        super(robotName, whatICanDo);
+    }
+}
+public class RobotDancer extends Robot {
+    public  RobotDancer(){
+        this.robotName = "RobotDancer";
+        this.whatICanDo = "dancer";
+    }
+    public RobotDancer(String robotName, String whatICanDo) {
+        super(robotName, whatICanDo);
+    }
+}
+public class RobotCoocker extends Robot{
+    public  RobotCoocker(){
+        this.robotName = "RobotCoocker";
+        this.whatICanDo = "cooker";
+    }
+    public RobotCoocker(String robotName, String whatICanDo) {
+        super(robotName, whatICanDo);
+    }
+}
