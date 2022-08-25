@@ -1,0 +1,46 @@
+public class Main {
+    public static void main(String[] args) {
+        Cow cow = new Cow();
+        cow.voice();
+        Cat cat = new Cat();
+        cat.voice();
+        Dog dog = new Dog();
+        dog.voice();
+    }
+}
+abstract class Pet{
+    String kindOfAnimal;
+    String typeofVoice;
+    abstract  void voice();
+
+}
+public class Dog extends Pet {
+    public Dog(){
+        kindOfAnimal = "Dog";
+        typeofVoice = "Gav-Gav";
+    }
+    @Override
+    void voice() {
+        System.out.println("I am a"+" "+this.kindOfAnimal+" - "+this.typeofVoice);
+    }
+}
+public class Cow extends Pet {
+    public Cow(){
+        kindOfAnimal = "Cow";
+        typeofVoice = "Myyy-Myy";
+    }
+    @Override
+    void voice() {
+        System.out.println("I am a"+" "+this.kindOfAnimal+" - "+this.typeofVoice);
+    }
+}
+public class Cat extends Pet {
+    public Cat(){
+        kindOfAnimal = "Cat";
+        typeofVoice = "May-May";
+    }
+    @Override
+    void voice() {
+        System.out.println("I am a"+" "+this.kindOfAnimal+" - "+this.typeofVoice);
+    }
+}
