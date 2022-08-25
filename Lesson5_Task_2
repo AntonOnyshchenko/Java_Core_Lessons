@@ -1,0 +1,24 @@
+public class Pet{
+    String name;
+    int age;
+    int width;
+    short length;
+   public Pet(){
+     this.name = "Default";
+     this.age = 0;
+   }
+   public Pet(int width){
+       new Pet();
+       this.width = width;
+   }
+   public  Pet(int width,short length){
+       new Pet();
+       this.width = width;
+       this.length= length;
+   }
+    public Pet(short length){
+        new Pet();
+        this.length = length;
+    }
+
+}
