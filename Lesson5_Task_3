@@ -1,0 +1,26 @@
+public class Main {
+    public static void main(String[] args) {
+       Amphibia frog =  new Frog();
+       frog.eat();
+       frog.sleep();
+       frog.swimming();
+       frog.walking();
+    }
+}
+public class Frog extends Amphibia{
+}
+public class Amphibia {
+    protected void eat(){
+        System.out.println("I want to eat");
+    }
+    protected void sleep(){
+        System.out.println("I go to sleep");
+    }
+    protected void swimming(){
+        System.out.println("I go to swimming to the ocean");
+    }
+    protected void walking(){
+        System.out.println("I go to walking to the earth");
+    }
+
+}
