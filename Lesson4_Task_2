@@ -1,0 +1,68 @@
+public class Main {
+    public static void main(String[] args) {
+       Animal animal = new Animal("Leopard",20, (byte) 7);
+        System.out.print("Назва тварини = " + " "+animal.getAnimalName()+","+ " " +"Швидкість тварини =" +" "+ animal.getAnimalSpeed()+" км/год,"+" "+ "Вік тварини ="+ " "+ animal.getAnimalAge()+ " років"+" ");
+        System.out.print("-------------------------");
+        animal.setAnimalName("Bull");
+        animal.setAnimalSpeed(2);
+        animal.setAnimalAge((byte) 14);
+        System.out.println();
+        System.out.print("Назва тварини = " + " "+animal.getAnimalName()+","+ " " +"Швидкість тварини =" +" "+ animal.getAnimalSpeed()+" км/год,"+" "+ "Вік тварини ="+ " "+ animal.getAnimalAge()+ " років"+" ");
+    }
+}
+public class Animal {
+    private String animalName;
+    private int animalSpeed;
+    private byte animalAge;
+    public  Animal(){
+        this.animalName = "Default";
+        this.animalSpeed = 0;
+        this.animalAge = 0;
+    }
+    public  Animal(String animalName){
+        this.animalName = animalName;
+        this.animalSpeed = 0;
+        this.animalAge = 1;
+    }
+    public  Animal(int animalSpeed){
+        this.animalName = "Default";
+        this.animalSpeed = animalSpeed;
+        this.animalAge = 1;
+    }
+    public  Animal(byte animalAge){
+        this.animalName = "Default";
+        this.animalSpeed = 0;
+        this.animalAge = animalAge ;
+    }
+
+    public  Animal(String animalName, int animalSpeed, byte animalAge){
+        this.animalName = animalName;
+        this.animalSpeed = animalSpeed;
+        this.animalAge = animalAge;
+    }
+
+    public void setAnimalName(String animalName) {
+        this.animalName = animalName;
+    }
+
+    public void setAnimalSpeed(int animalSpeed) {
+        this.animalSpeed = animalSpeed;
+    }
+
+    public void setAnimalAge(byte animalAge) {
+        this.animalAge = animalAge;
+    }
+
+    public String getAnimalName() {
+        return animalName;
+    }
+
+    public int getAnimalSpeed() {
+        return animalSpeed;
+    }
+
+    public byte getAnimalAge() {
+        return animalAge;
+    }
+
+}
